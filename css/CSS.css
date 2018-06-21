@@ -3,9 +3,14 @@ ul {
 }
 
 header {
+    font-family: "Microsoft YaHei";
     width: 1260px;
     margin: auto;
     padding-top: 0;
+}
+
+body {
+    font-family: "Microsoft YaHei", sans-serif;
 }
 
 header table {
@@ -53,20 +58,33 @@ table {
 }
 
 div#main03 {
+    width: 1260px;
+    position: relative;
     margin-top: 0px;
     margin-bottom: 0px;
     padding-top: 0px;
     padding-bottom: 0px;
+    margin-left: auto;
+    margin-right: auto;
+    overflow: hidden;
 }
 
-a {
+a:link {
     color: blue;
     text-decoration: underline;
+}
+
+a:visited {
+    color: darkmagenta;
 }
 
 a#ex {
     color: aliceblue;
     text-decoration: none;
+}
+
+a:hover#ex {
+    color: crimson;
 }
 
 nav {
@@ -100,9 +118,21 @@ nav#main1 {
     height: auto;
 }
 
-nav ul li#main1 {
+nav ul li#sub1 {
     height: auto;
     width: auto;
+}
+
+nav ul li#sub2 {
+    height: auto;
+    width: auto;
+    opacity: 0.3
+}
+
+nav ul li#sub3 {
+    height: auto;
+    width: auto;
+    opacity: 0.3
 }
 
 nav ul li#color {
@@ -114,6 +144,10 @@ a#nav {
     text-decoration: none;
 }
 
+a:hover#nav {
+    color: crimson;
+}
+
 footer {
     clear: both;
     font-size: 10px;
@@ -121,12 +155,13 @@ footer {
     background-color: darkblue;
     color: aliceblue;
     text-align: center;
-    margin-left: auto;
-    margin-right: auto;
+    margin-left: 0;
+    margin-right: 0;
     line-height: 40px;
 }
 
 div#left {
+    display: inline;
     margin-top: 30px;
     float: left;
     margin-left: 40px;
@@ -151,17 +186,21 @@ li#blue1 {
 }
 
 li#color1 {
+    width: 350px;
     height: 50px;
     background-color: darkblue;
     color: aliceblue;
     line-height: 50px;
+    margin-left: 30px;
 }
 
 li#color2 {
+    width: 350px;
     background-color: forestgreen;
     color: aliceblue;
     line-height: 50px;
     height: 50px;
+    margin-left: 30px;
 }
 
 li#link1 {
@@ -175,9 +214,17 @@ table#table1 {
     margin-left: 20px;
 }
 
+th {
+    text-align: center;
+}
+
+td {
+    text-align: center;
+}
+
 td#td1 {
     text-align: left;
-    padding-top: 30px;
+    padding-top: 20px;
 }
 
 div#table1 {
@@ -197,5 +244,248 @@ td#ex {
 }
 
 div#ex2 {
+    clear: both;
     width: 1366px;
+    overflow: hidden;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#ex3 {
+    margin-top: 30px;
+    float: left;
+    margin-left: 40px;
+    width: 410px;
+}
+
+div ex4 {
+    width: 410px;
+    height: auto;
+}
+
+table#table2 {
+    width: 410px;
+    height: 300px;
+    margin-bottom: 40px;
+}
+
+td#td2 {
+    border: 5px solid white;
+    width: 100px;
+    height: 100px;
+    padding: 10px;
+    background-color: cadetblue;
+    color: white;
+}
+
+th#th1 {
+    color: darkblue;
+    font-size: 25px
+}
+
+table#table3 {
+    width: 410px;
+    height: auto;
+    margin-bottom: 30px;
+}
+
+td#td3 {
+    border: 5px solid white;
+    height: 50px;
+    background-color: darkblue;
+    color: aliceblue;
+}
+
+td#td4 {
+    border: 5px solid white;
+    height: 50px;
+    background-color: chartreuse;
+    color: aliceblue;
+}
+
+a:hover {
+    color: crimson;
+}
+
+nav#sub {
+    height: auto;
+    width: auto;
+    text-align: center;
+    margin-left: 20px;
+    margin-right: auto;
+}
+
+li#sub {
+    width: 205px;
+    height: 60px;
+    background-color: darkblue;
+    color: aliceblue;
+    line-height: 60px;
+    margin-left: 0px;
+    font-size: 15px;
+}
+
+table#table4 {
+    width: 880px;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+td#td5 {
+    font-size: 14px;
+    text-align: left;
+    padding: 18px;
+}
+
+td#inform {
+    width: 130px;
+    font-size: 14px;
+    text-align: center;
+    padding: 8px;
+    color: aliceblue;
+
+}
+
+div#inform {
+    height: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100px;
+    background-color: cornflowerblue;
+    line-height: 25px;
+}
+
+div#cam {
+    height: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100px;
+    background-color: crimson;
+    line-height: 25px;
+}
+
+div#news {
+    height: 25px;
+    padding-left: 12px;
+    padding-right: 12px;
+    width: 100px;
+    background-color: sandybrown;
+    line-height: 25px;
+}
+
+table#table5 {
+    height: 300px;
+    width: 1250px;
+    margin-left: 20px;
+    padding-top: 0px;
+}
+
+div#table6 {
+    clear: both;
+    height: 350px;
+    width: 1240px;
+    background-color: gainsboro;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 40px;
+    overflow: hidden;
+}
+
+th#th2 {
+    font-size: 18px;
+    color: darkblue;
+    padding-top: 10px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+td#td6 {
+    padding: 0px;
+    margin: 0px;
+    height: 25px;
+    text-align: left;
+    padding-left: 50px;
+}
+
+table#table6 {
+    width: 1240px;
+    padding-top: 40px;
+    margin-bottom: 40px;
+}
+
+td#td7 {
+    padding: 0px;
+    margin: 0px;
+}
+
+div#arrowleft {
+    position: absolute;
+    left: 10px;
+    top: 180px;
+}
+
+div#arrowright {
+    position: absolute;
+    right: 10px;
+    top: 180px;
+}
+
+div#table7 {
+    width: 1240px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+div#slider1 {
+    display: inline-block;
+    overflow: hidden;
+    position: relative;
+    float: left;
+}
+
+div#slider2 {
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+}
+
+div#slider3 {
+    position: absolute;
+    overflow: hidden;
+    display: inline-block;
+    float: left;
+}
+
+ul#solider {
+    position: relative;
+    width: 4000px;
+    height: 400px;
+    display: inline-block;
+    text-align: center;
+    list-style-type: none;
+    margin: 0 0 0 0;
+    padding-left: 0px;
+    overflow: hidden;
+}
+
+li#solider1 {
+    display: inline-block;
+    width: 1260px;
+    margin: 0px;
+    float: left;
+}
+
+li#solider2 {
+    display: inline-block;
+    width: 1260px;
+    margin: 0px;
+    float: left;
+}
+
+li#solider3 {
+    display: inline-block;
+    width: 1260px;
+    margin: 0px;
+    float: left;
 }
