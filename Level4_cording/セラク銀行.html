@@ -1,0 +1,588 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+    <meta charset="utf-8">
+    <title>セラク銀行</title>
+    <link rel="stylesheet" href="css/CSS.css">
+
+    <script src="http://ajax.aspnetcdn.com/ajax/jQuery/jquery-1.8.0.js">
+
+
+    </script>
+    <script>
+        $(document).ready(function() {
+            $("#arrowright").mouseover(function() {
+                if (i != 3)
+                    $(this).css("background-color", "gainsboro")
+            });
+            $("#arrowright").mouseout(function() {
+                $(this).css("background-color", "")
+            });
+            $("#arrowleft").mouseover(function() {
+                if (i != 1)
+                    $(this).css("background-color", "gainsboro")
+            });
+            $("#arrowleft").mouseout(function() {
+                $(this).css("background-color", "")
+            });
+            var i = 1;
+            $("#arrowright").click(function() {
+                if (i == 1) {
+                    $("#solider").animate({
+                        left: "-1260px"
+                    }, "slow");
+                    $("#sub1").css("opacity", "0.3");
+                    $("#sub2").css("opacity", "1");
+                    $("#sub3").css("opacity", "0.3");
+                    i++;
+                } else if (i == 2) {
+                    $("#solider").animate({
+                        left: "-2520px"
+                    }, "slow");
+                    $("#sub1").css("opacity", "0.3");
+                    $("#sub2").css("opacity", "0.3");
+                    $("#sub3").css("opacity", "1");
+                    i++;
+                }
+            });
+            $("#arrowleft").click(function() {
+                if (i == 2) {
+                    $("#solider").animate({
+                        left: 0
+                    }, "slow");
+                    $("#sub1").css("opacity", "1");
+                    $("#sub2").css("opacity", "0.3");
+                    $("#sub3").css("opacity", "0.3");
+                    i--;
+                } else if (i == 3) {
+                    $("#solider").animate({
+                        left: "-1260px"
+                    }, "slow");
+                    $("#sub1").css("opacity", "0.3");
+                    $("#sub2").css("opacity", "1");
+                    $("#sub3").css("opacity", "0.3");
+                    i--;
+                }
+            });
+
+            $("#sub1").click(function() {
+                $("#solider").animate({
+                    left: 0
+                }, "slow");
+                $("#sub1").css("opacity", "1");
+                $("#sub2").css("opacity", "0.3");
+                $("#sub3").css("opacity", "0.3");
+                i = 1;
+            });
+
+            $("#sub2").click(function() {
+                $("#solider").animate({
+                    left: "-1260px"
+                }, "slow");
+                $("#sub1").css("opacity", "0.3");
+                $("#sub2").css("opacity", "1");
+                $("#sub3").css("opacity", "0.3");
+                i = 2;
+            });
+
+            $("#sub3").click(function() {
+                $("#solider").animate({
+                    left: "-2520px"
+                }, "slow");
+                $("#sub1").css("opacity", "0.3");
+                $("#sub2").css("opacity", "0.3");
+                $("#sub3").css("opacity", "1");
+                i = 3;
+
+            });
+            $("#sub01").click(function() {
+                $("#sub01").css("background-color", "darkblue");
+                $("#sub02").css("background-color", "gainsboro");
+                $("#sub03").css("background-color", "gainsboro");
+                $("#sub04").css("background-color", "gainsboro");
+                $("#show").css("display", "block");
+                $("#none1").css("display", "none");
+                $("#none2").css("display", "none");
+                $("#none3").css("display", "none");
+            });
+
+            $("#sub02").click(function() {
+                $("#sub01").css("background-color", "gainsboro");
+                $("#sub02").css("background-color", "darkblue");
+                $("#sub03").css("background-color", "gainsboro");
+                $("#sub04").css("background-color", "gainsboro");
+                $("#show").css("display", "none");
+                $("#none1").css("display", "block");
+                $("#none2").css("display", "none");
+                $("#none3").css("display", "none");
+            });
+
+            $("#sub03").click(function() {
+                $("#sub01").css("background-color", "gainsboro");
+                $("#sub02").css("background-color", "gainsboro");
+                $("#sub03").css("background-color", "darkblue");
+                $("#sub04").css("background-color", "gainsboro");
+                $("#show").css("display", "none");
+                $("#none1").css("display", "none");
+                $("#none2").css("display", "block");
+                $("#none3").css("display", "none");
+            });
+
+            $("#sub04").click(function() {
+                $("#sub01").css("background-color", "gainsboro");
+                $("#sub02").css("background-color", "gainsboro");
+                $("#sub03").css("background-color", "gainsboro");
+                $("#sub04").css("background-color", "darkblue");
+                $("#show").css("display", "none");
+                $("#none1").css("display", "none");
+                $("#none2").css("display", "none");
+                $("#none3").css("display", "block");
+            });
+        });
+
+    </script>
+</head>
+
+<body>
+    <header>
+        <h1>
+            <a href="#"><img src="images/logo.png" alt="セラク銀行" ></a>
+            <table>
+                <tr>
+                    <td></td>
+                    <td></td>
+                    <td id="link"><a href="#">global site</a>&nbsp;&nbsp;&nbsp;<a href="#">site map</a>
+                    </td>
+                </tr>
+                <tr>
+                    <td>金融コード：0917</td>
+                    <td>文字サイズ:
+                        <a href="#"><img src="images/fontsize_s.png" alt="小"></a>
+                        <a href="#"><img src="images/fontsize_m.png" alt="中"></a>
+                        <a href="#"><img src="images/fontsize_l.png" alt="大"></a>
+                    </td>
+                    <td><input type="text" name="search" value="検索ワードを入力"><a href="#"><img src="images/search.png"></a></td>
+                </tr>
+            </table>
+        </h1>
+    </header>
+    <nav>
+        <ul>
+            <li id="color"><a href="#" id="nav">個人のお客様</a>
+            </li>
+            <li id="color"><a href="#" id="nav">法人のお客様</a>
+            </li>
+            <li id="color"><a href="#" id="nav">株主・投資家のお客様</a>
+            </li>
+            <li id="color"><a href="#" id="nav">採用情報</a>
+            </li>
+            <li id="color"><a href="#" id="nav">せらく銀行について</a>
+            </li>
+        </ul>
+    </nav>
+    <div id="main03">
+        <ul id="solider">
+            <li id="solider1"><img src="images/main03.png"></li>
+            <li id="solider2"><img src="images/main02.png"></li>
+            <li id="solider3"><img src="images/main01.png"></li>
+        </ul>
+        <div id="arrowleft">
+            <img src="images/arrow_left.png">
+        </div>
+        <div id="arrowright">
+            <img src="images/arrow_right.png">
+        </div>
+
+    </div>
+
+    <nav id="main1">
+        <ul>
+            <li id="sub1"><img src="images/main01_thumb.png">
+            </li>
+            <li id="sub2"><img src="images/main02_thumb.png">
+            </li>
+            <li id="sub3"><img src="images/main03_thumb.png">
+            </li>
+        </ul>
+    </nav>
+    <div id="ex2">
+        <div id="left">
+            <ul>
+                <li id="blue1">インターネットバンキング</li>
+                <li>せらく銀行インターネットバンキング</li>
+                <li id="color1"><a href="#" id="ex">ログインサービス</a></li>
+                <li id="color2"><a href="#" id="ex">はじめてログインする方</a></li>
+                <li id="link1">
+                    <a href="##"> ＞パスワードを忘れた方はこちら</a></li>
+            </ul>
+        </div>
+        <div id="table1">
+            <table id="table1">
+                <tr>
+                    <td colspan="2" id="ex">個人のお客様</td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="##">＞口座をひらく</a></td>
+                    <td id="td1"><a href="##">＞住宅ローン</a></td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="##">＞投資信託</a></td>
+                    <td id="td1"><a href="##">＞外貨預金</a></td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="##">＞バンクイック</a></td>
+                    <td id="td1"><a href="##">＞キャンペーン一覧</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="table1">
+            <table id="table1">
+                <tr>
+                    <td colspan="2" id="ex">法人のお客様</td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="##">＞口座をひらく</a></td>
+                    <td id="td1"><a href="##">＞でんさい</a></td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="##">＞CSRの取り込み</a></td>
+                    <td id="td1"><a href="##">＞地球環境問題への対応</a></td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="##">＞CSRの取り込み</a></td>
+                    <td id="td1"><a href="##">＞Global　Website</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="ex2">
+        <div id="ex3">
+            <div id="ex4">
+                <table id="table2">
+                    <tr>
+                        <th colspan="9" id="th1">サービスのご案内</th>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="td2"><a href="##" id="ex">店铺<br>・<br>ATM検索</a></td>
+                        <td colspan="3" id="td2"><a href="##" id="ex">資料請求</a></td>
+                        <td colspan="3" id="td2"><a href="##" id="ex">金利一覧</a></td>
+                    </tr>
+                    <tr>
+                        <td colspan="3" id="td2"><a href="##" id="ex">手数料</a></td>
+                        <td colspan="3" id="td2"><a href="##" id="ex">よくあるご質問</a></td>
+                        <td colspan="3" id="td2"><a href="##" id="ex">投資信託基準<br>価格一覧</a></td>
+                    </tr>
+                </table>
+            </div>
+
+            <div>
+                <table id="table3">
+                    <tr>
+                        <td id="td3"><a href="#" id="ex">口座開設のご案内</a></td>
+                    </tr>
+                    <tr>
+                        <td id="td3"><a href="#" id="ex">金融経済ニュース</a></td>
+                    </tr>
+                    <tr>
+                        <td id="td3"><a href="#" id="ex">詐欺に注意！！</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="ex4">
+                <table id="table3">
+                    <tr>
+                        <td id="td4"><a href="#" id="ex">テレビCM・動画のご紹介</a></td>
+                    </tr>
+                    <tr>
+                        <td id="td4"><a href="#" id="ex">今から考える教育ローン</a></td>
+                    </tr>
+                </table>
+            </div>
+            <div id="ex4">
+                <a href="#"><img src="images/caution.png"></a>
+            </div>
+        </div>
+        <div id="table1">
+            <table id="table1">
+                <tr>
+                    <td colspan="2" id="ex">株主・投資家の皆様</td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="###">＞決算広告</a></td>
+                    <td id="td1"><a href="##">＞社債情報</a></td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="table1">
+            <table id="table1">
+                <tr>
+                    <td colspan="2" id="ex">採用情報</td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="####">＞新卒採用</a></td>
+                    <td id="td1"><a href="###">＞中途採用</a></td>
+                </tr>
+                <tr>
+                    <td id="td1"><a href="##">＞海外現地採用</a></td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="table1">
+            <nav id="sub">
+                <ul>
+                    <li id="sub01">新着情報</li>
+                    <li id="sub02">ニュースリリース</li>
+                    <li id="sub03">キャンペーン</li>
+                    <li id="sub04">お知らせ</li>
+                </ul>
+            </nav>
+        </div>
+        <div id="show">
+            <table id="table4">
+                <tr>
+                    <td id="td5">2015年6月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">【インターネットバンキング】パスワード等を入力させる偽メールがとどいても、<br>絶対に入力しないでください！</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2015年5月10日</td>
+                    <td id="inform">
+                        <div id="cam">キャンペーン</div>
+                    </td>
+                    <td id="td5"><a href="##">抽選で200人に１万円が当たる！夏の資産運用キャンペーン実施中。</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2015年4月10日</td>
+                    <td id="inform">
+                        <div id="cam">キャンペーン</div>
+                    </td>
+                    <td id="td5"><a href="##">平成27年5月25日(月)より「子ども口座開設キャンペーン」を開始します。</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2015年3月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">「年金情報流出」を口実にした振込め詐欺や個人情報の搾取にご注意ください</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2015年2月10日</td>
+                    <td id="inform">
+                        <div id="news">ニュースリリース</div>
+                    </td>
+                    <td id="td5"><a href="##">スウェーデンせらく銀行○○支店開業についてpdf(97kbs)</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2015年1月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">お客様の情報のSRKグループでの共同利用について</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2014年12月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">LINE公式アカウントを開設しました！</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2014年11月10日</td>
+                    <td id="inform">
+                        <div id="news">ニュースリリース</div>
+                    </td>
+                    <td id="td5"><a href="##">【せらくダイレクと】ワンタイムパスワードの提供開始についてpdf(130KB)</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2014年10月10日</td>
+                    <td id="inform">
+                        <div id="cam">キャンペーン</div>
+                    </td>
+                    <td id="td5"><a href="##">抽選でカタログギフトが当たる！保険の見直しキャンペーン実施中</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="none1">
+            <table id="table4">
+                <tr>
+                    <td id="td5">2015年2月10日</td>
+                    <td id="inform">
+                        <div id="news">ニュースリリース</div>
+                    </td>
+                    <td id="td5"><a href="##">スウェーデンせらく銀行○○支店開業についてpdf(97kbs)</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2014年11月10日</td>
+                    <td id="inform">
+                        <div id="news">ニュースリリース</div>
+                    </td>
+                    <td id="td5"><a href="##">【せらくダイレクと】ワンタイムパスワードの提供開始についてpdf(130KB)</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="none2">
+            <table id="table4">
+                <tr>
+                    <td id="td5">2015年5月10日</td>
+                    <td id="inform">
+                        <div id="cam">キャンペーン</div>
+                    </td>
+                    <td id="td5"><a href="##">抽選で200人に１万円が当たる！夏の資産運用キャンペーン実施中。</a>
+                </tr>
+                <tr>
+                    <td id="td5">2015年4月10日</td>
+                    <td id="inform">
+                        <div id="cam">キャンペーン</div>
+                    </td>
+                    <td id="td5"><a href="##">平成27年5月25日(月)より「子ども口座開設キャンペーン」を開始します。</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2014年10月10日</td>
+                    <td id="inform">
+                        <div id="cam">キャンペーン</div>
+                    </td>
+                    <td id="td5"><a href="##">抽選でカタログギフトが当たる！保険の見直しキャンペーン実施中</a></td>
+                </tr>
+            </table>
+        </div>
+
+        <div id="none3">
+            <table id="table4">
+                <tr>
+                    <td id="td5">2015年6月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">【インターネットバンキング】パスワード等を入力させる偽メールがとどいても、<br>絶対に入力しないでください！</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2015年3月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">「年金情報流出」を口実にした振込め詐欺や個人情報の搾取にご注意ください</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2015年1月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">お客様の情報のSRKグループでの共同利用について</a></td>
+                </tr>
+                <tr>
+                    <td id="td5">2014年12月10日</td>
+                    <td id="inform">
+                        <div id="inform">お知らせ</div>
+                    </td>
+                    <td id="td5"><a href="##">LINE公式アカウントを開設しました！</a></td>
+                </tr>
+            </table>
+        </div>
+    </div>
+
+    <div id="table6">
+        <table id="table5">
+            <tr>
+                <th rowspan="2" id="th2">個人のお客様</th>
+                <th rowspan="2" id="th2">法人のお客様</th>
+                <th rowspan="2" id="th2">株主・投資家の皆様</th>
+                <th rowspan="2" id="th2">採用情報</th>
+                <th rowspan="2" id="th2">セラク銀行について</th>
+            </tr>
+            <tr>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+                <td></td>
+            </tr>
+            <tr>
+                <td id="td6"><a href="##">普通預金</a></td>
+                <td id="td6"><a href="##">資金調達</a></td>
+                <td id="td6"><a href="##">せらくグループの概要</a></td>
+                <td id="td6"><a href="##">新卒採用</a></td>
+                <td id="td6"><a href="##">ごあいさつ</a></td>
+            </tr>
+            <tr>
+                <td id="td6"><a href="##">定期預金・積立</a></td>
+                <td id="td6"><a href="##">国際業務・外為取引</a></td>
+                <td id="td6"><a href="##">決算広告</a></td>
+                <td id="td6"><a href="##">キャリア採用</a></td>
+                <td id="td6"><a href="##">事業内容</a></td>
+            </tr>
+            <tr>
+
+                <td id="td6"><a href="##">外貨預金</a></td>
+                <td id="td6"><a href="##">福利厚生</a></td>
+                <td id="td6"><a href="##">社債情報</a></td>
+                <td id="td6"><a href="##">海外現地採用</a></td>
+                <td id="td6"><a href="##">企業の社会的責任(CSR)</a></td>
+            </tr>
+            <tr>
+                <td id="td6"><a href="##">外債</a></td>
+                <td id="td6"><a href="##">事業戦略・経営相談</a></td>
+                <td id="td6"></td>
+                <td id="td6"><a href="##">契約社員のお仕事</a></td>
+                <td id="td6"><a href="##">役員一覧</a></td>
+            </tr>
+            <tr>
+                <td id="td6"><a href="##">ファンドラップ</a></td>
+                <td id="td6"><a href="##">振込み・入金確認の効率化</a></td>
+                <td id="td6"></td>
+                <td id="td6"><a href="##">派遣社員のお仕事</a></td>
+                <td id="td6"><a href="##">組織体制</a></td>
+            </tr>
+            <tr>
+                <td id="td6"><a href="##">個人向け国債</a></td>
+                <td id="td6"><a href="##">電子記録債権・手形関連</a></td>
+                <td id="td6"></td>
+                <td id="td6"></td>
+                <td id="td6"><a href="##">お問い合わせ先</a></td>
+            </tr>
+            <tr>
+                <td id="td6"><a href="##">退職金運用のご案内</a></td>
+                <td id="td6"></td>
+                <td id="td6"></td>
+                <td id="td6"></td>
+                <td id="td6"></td>
+            </tr>
+        </table>
+    </div>
+
+    <div id="table7">
+        <table id="table6">
+            <tr>
+                <td><a href="##">お客様の個人情報保護について</a></td>
+                <td><a href="##">金融商品勧誘方針</a></td>
+                <td><a href="##">法人等のお客様の情報について</a></td>
+                <td><a href="##">本サイトのご利用にあたって</a></td>
+                <td><a href="##">反社会勢力に対する基本方針</a></td>
+            </tr>
+        </table>
+    </div>
+    <footer>Copyright@2018 Seraku Banking Corporation.All Rights Reserved.</footer>
+</body>
+
+</html>
